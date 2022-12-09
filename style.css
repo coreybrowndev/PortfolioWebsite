@@ -5,11 +5,302 @@
     box-sizing: border-box;
 }
 body{
-    background: #080808;
-    color: #fff;
+    margin: 0;
 }
+
 #header{
     width: 100%;
     height: 100vh;
-    background-image :
+    background: linear-gradient(to right top, #192841, #2f3032);
+    position: relative;
+    overflow: hidden;
 }
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 180px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #fae6b8fe;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+
+}
+
+.header-text{
+    margin-top: 15%;
+    font-size: 60px;
+}
+
+.header-text h1{
+    color: white;
+    position: relative;
+    left: 5%;
+    font-size: 110px;
+}
+
+.header-text p{
+    color: rgba(255, 255, 255, 0.639);
+    position: relative;
+    left: 6%;
+    font-size: 18px;
+}
+
+
+/* .circle1,.circle2 {
+    background: white;
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255, 255, 255, 0.9), 
+        rgba(255, 255, 255, 0.1));
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle1 {
+    bottom: 15%;
+    right: 1%;
+}
+
+.circle2 {
+    top: 15%;
+    right: 29%;
+} */
+
+/* .bitmoji {
+    position: absolute;
+    top: 15%;
+    left: 60%;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border: 10px solid rgb(0, 0, 0);
+} */
+
+.contact-me-button{
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: white;
+    top: 60%;
+    left: 15%;
+    width: 160px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #121212;
+    text-transform: uppercase;
+    border-radius: 5px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.contact-me-button:hover, .contact-me-button:focus, 
+.contact-me-button:active, .view-resume-btn:hover, 
+.view-resume-btn:focus, .view-resume-btn:active{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.view-resume-btn {
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: white;
+    top: 60%;
+    left: 27%;
+    width: 160px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #121212;
+    text-transform: uppercase;
+    border-radius: 5px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+
+/* -------about-------- */
+
+#about {
+    padding: 80px 0;
+    background: linear-gradient(to right top, #152238, black)
+}
+
+.row {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 990px;
+    height: 990px;
+    left: -100px;
+    margin: auto;
+}
+
+.about-title {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+.about-desc {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.487);
+}
+
+
+.introduction-title {
+    color: white;
+    margin-top: 25%;
+    font-size: 27px;
+}
+
+.intro-text {
+    color: rgba(255, 255, 255, 0.487);
+}
+.intro-text2 {
+    color: rgba(255, 255, 255, 0.487);
+}
+
+.about-col-2 {
+    color: white;
+}
+
+.skills-title {
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    top: 142px;
+    right: 1px;
+}
+
+.pill-1, .pill-2, .pill-3, .pill-4, .pill-5, .pill-6 {
+    font-size: 12px;
+    font-family: 'Roboto' sans-serif;
+    padding: 0.5em ;
+    margin: 0.25em;
+    border-radius: 1em;
+    border: none;
+    outline: none;
+    background-color: #dfbc6b6d;
+    box-shadow: 0 8px 32px 0 rgba(249, 213, 29, 0.2);
+    border: 1px solid #121212;
+    position: absolute;
+    
+}
+
+.pill-1:hover, 
+.pill-2:hover, 
+.pill-3:hover, 
+.pill-4:hover, 
+.pill-5:hover, .pill-6:hover {
+    background: rgb(204, 231, 244);
+}
+
+
+.pill-1 {
+    top: 200px;
+    right: 5px;
+}
+.pill-2 {
+    top: 200px;
+}
+.pill-3 {
+    top: 200px;
+    right: 115px;
+}
+.pill-4 {
+    top: 250px;
+}
+.pill-5 {
+    top: 250px;
+    right: 5px;
+}
+.pill-6 {
+    top: 250px;
+    right: 115px;
+}
+/* .glass{
+    position: relative;
+    background: rgb(255, 255, 255);
+    width: 50%;
+    height: 20%;
+    top: 0%;
+    left: 0%;
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255, 255, 255, 0.3), 
+        rgba(255, 255, 255, 0.3));
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(2px);
+    border-radius: 25px;
+    z-index: 1;
+} */
+
+.contact-me-btn2 {
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    background: #dfbc6b6d;
+    font-size: 16px;
+    left: 460px;
+    bottom: -520px;
+    padding: 0.5em ;
+    margin: 0.25em;
+    border-radius: 1em;
+    border: none;
+    outline: none;
+    background-color: #dfbc6b6d;
+    box-shadow: 0 8px 32px 0 rgba(249, 213, 29, 0.2);
+    border: 1px solid #121212;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
