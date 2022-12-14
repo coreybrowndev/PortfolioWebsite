@@ -150,33 +150,81 @@ nav ul li a:hover::after{
     margin-top: 5%;
 }
 
-.col-1 h2 {
+.col-1 {
+    width: 400px;
+    margin: 20px;
+}
+
+.col-1 h2, .col-2 h2{
     color: white;
     font-size: 27px;
 }
 
-.col-1 {
-    padding-right: 10px;
-    word-break: break-all;
+.col-2 h2 {
+    padding-bottom: 15px;
 }
 
 .col-1 p{
     padding-top: 10px;
     color: rgba(255, 255, 255, 0.487);
-    word-break: break-all;
+
 }
 
-#p2 {
-    margin-top: -40px !important;
+
+.col-2 {
+    margin: 20px;
+    margin-left: 100px;
+    width: 400px;
+    /* background-color: grey; */
 }
 
-.col-2 h2 {
+
+.col-1 a {
+    font-family: "Roboto", sans-serif;
     color: white;
+    background: #dfbc6b6d;
+    font-size: 15px;
+    padding: 15px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #192841;
+    box-shadow: 0 8px 32px 0 rgba(178, 196, 246, 0.1);
+    border: 1px solid #121212;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: 10px 130px;
+    position: relative;
+    left: -135px;
+}
+.col-1 a:hover {
+    background-color: #34445a;
+    transform: scale(1.08);
+    transition: all 0.5s ease;
 }
 
+.button {
+    font-size: 15px;
+    font-family: 'Roboto' sans-serif;
+    padding: 0.6em;
+    margin: 0.25em;
+    border: none;
+    outline: none;
+    background-color: #192841;
+    box-shadow: 0 8px 32px 0 rgba(178, 196, 246, 0.2);
+    border: 1px solid #121212;
+    border-radius: 5px;
+    color: white;
 
+}
 
-
+.button:hover {
+    background-color: #34445a;
+    transform: scale(1.08);
+    transition: all 0.5s ease;
+}
 
 /* -------projects-------- */
 
@@ -188,7 +236,7 @@ nav ul li a:hover::after{
 }
 
 .projects-header {
-    margin-top: 10%;
+    margin-top: 2%;
 }
 
 .projects-header h2 {
@@ -254,9 +302,6 @@ nav ul li a:hover::after{
     display: block;
 }
 
-#p1 {
-    padding-bottom: 50px;
-}
 
 .card:hover {
     background-color: rgb(41, 35, 50);
@@ -264,6 +309,8 @@ nav ul li a:hover::after{
     transform: scale(1.08);
     transition: all 1s ease;
 }
+
+/* -------contact-me-------- */
 
 
 
