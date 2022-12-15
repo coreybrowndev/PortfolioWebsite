@@ -84,7 +84,7 @@
         <div class="card">
           <div class="card-image wiki-app"></div>
           <h2>Wikipedia Revisioner</h2>
-          <p>This app is all about accessing changes, with the Wikipedia Revisioner,
+          <p>This app is all about accessing changes, with tqhe Wikipedia Revisioner,
             users are provided the ability to search any term available on Wikipedia and the app will provide a
             detailed list of the most recent changes made to the Wikipedia article. This app can be used by 
             various people whom have different purposes.</p>
@@ -97,24 +97,23 @@
     <section class="glass">
       <div class="glass-2">
         <div class="contact-header">
-          <h1>Hey, Let's Chat!</h1>
+          <h1>Contact me</h1>
           <p>Psst, Fill out the form to the right. Let's do this!</p>
-          <img src="images/chat-heart.png" alt="">
         </div>
       </div>
         <div class="background-form">
-          <form>
+          <form onsubmit="event.preventDefault(); validateForm();">
             <label for="name">Name</label>
             <input type="text" id="name" placeholder="Enter your name">
-            <small class="Error"></small>
+            <small class="error"></small>
 
             <label for="email">Email</label>
             <input type="text" id="email" placeholder="email@example.com">
             <small class="error"></small>
 
             <label for="message">Message</label>
-            <textarea id="message" placeholder="Enter a message for us!" rows="6"></textarea>
-            <small class="Error"></small>
+            <textarea id="message" placeholder="Enter a message for us!" rows="6" id="m-box"></textarea>
+            <small class="error"></small>
 
             <div class="center">
               <input type="submit" value="Send Message">
