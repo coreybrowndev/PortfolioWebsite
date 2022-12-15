@@ -27,7 +27,7 @@
         building beautiful web and mobile apps---</p>
     </div>
     <a href="#" class="contact-me-button">Contact Me</a>
-    <a href="#" class="view-resume-btn">View Resume</a>
+    <a href="https://drive.google.com/file/d/17MkdFDHEUtnNKKVFUo_KOQ3x_H05VLxV/view?usp=share_link" class="view-resume-btn">View Resume</a>
 
     </div>
   </div>
@@ -92,11 +92,39 @@
         </div>
     </section>
   </section>
-  /* -------contact-me-------- */
-  <section class="contact-me">
-    <div class="contact-form">
+  <!-- /* -------contact-me-------- */ -->
+  <main>
+    <section class="glass">
+      <div class="glass-2">
+        <div class="contact-header">
+          <h1>Hey, Let's Chat!</h1>
+          <p>Psst, Fill out the form to the right. Let's do this!</p>
+          <img src="images/chat-heart.png" alt="">
+        </div>
+      </div>
+        <div class="background-form">
+          <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+            <small class="Error"></small>
 
-    </div>
-  </section>
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="email@example.com">
+            <small class="error"></small>
+
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Enter a message for us!" rows="6"></textarea>
+            <small class="Error"></small>
+
+            <div class="center">
+              <input type="submit" value="Send Message">
+              <p id="success!"></p>
+            </div>
+          </form>
+          <img src="images/black-white.png" alt="">
+        </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
