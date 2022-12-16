@@ -13,10 +13,10 @@
       <nav>
         <img src="images/cb-together-logo.png" class="logo">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about-whole">About</a></li>
+          <li><a href="#projects-whole">Portfolio</a></li>
+          <li><a href="#contact-whole">Contact</a></li>
         </ul>
     </nav>
 
@@ -26,7 +26,7 @@
       <p>A passionate Software Developer based in the US, focused on<br>
         building beautiful web and mobile apps---</p>
     </div>
-    <a href="#" class="contact-me-button">Contact Me</a>
+    <a href="#contact-whole" class="contact-me-button">Contact Me</a>
     <a href="https://drive.google.com/file/d/17MkdFDHEUtnNKKVFUo_KOQ3x_H05VLxV/view?usp=share_link" class="view-resume-btn">View Resume</a>
 
     </div>
@@ -38,7 +38,7 @@
 
   <!-- ---------about--------- -->
 
-  <section class="about">
+  <section class="about" id="about-whole">
       <div class="about-header">
         <h1>About Me</h1>
         <p>Here you will find more details About me and My Interests </p>
@@ -52,7 +52,7 @@
         <p id="p2">I am currently open and available to employers, with the hopes 
         of making users happy with clean and effecient products. I take pride in writing
         effective and functional apps that are built to last.</p>
-        <a href="#">Contact Me</a>
+        <a href="#contact-whole">Contact Me</a>
         </div>
         <div class="col-2">
           <h2>Technologies and Skills</h2>
@@ -71,7 +71,7 @@
       <p>Below are a few projects that I have worked on</p>
     </div>
 
-    <section class="projects">
+    <section class="projects" id="projects-whole">
         <div class="card">
           <div class="card-image silver-screen"></div>
           <h2>Silver Screen</h2>
@@ -79,7 +79,7 @@
             level, users have the option to interact with movies and add these movies to a
             watched later or favorites list. The app provides an explore option for users to
             locate and find personal tailored movies to their liking.</p>
-            <a href="">VIEW</a>
+            <a href="https://github.com/coreybrowndev/SilverScreen">VIEW</a>
         </div>
         <div class="card">
           <div class="card-image wiki-app"></div>
@@ -88,12 +88,12 @@
             users are provided the ability to search any term available on Wikipedia and the app will provide a
             detailed list of the most recent changes made to the Wikipedia article. This app can be used by 
             various people whom have different purposes.</p>
-            <a href="">VIEW</a>
+            <a href="https://github.com/coreybrowndev/WikiRevisioner">VIEW</a>
         </div>
     </section>
   </section>
   <!-- /* -------contact-me-------- */ -->
-  <main>
+  <main id="contact-whole">
     <section class="glass">
       <div class="glass-2">
         <div class="contact-header">
@@ -102,22 +102,22 @@
         </div>
       </div>
         <div class="background-form">
-          <form onsubmit="event.preventDefault(); validateForm();">
+          <form name="submit-to-google-sheet" onsubmit="event.preventDefault(); validateForm();">
             <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your name">
+            <input type="text" id="name" name="Name" placeholder="Enter your name">
             <small class="error"></small>
 
             <label for="email">Email</label>
-            <input type="text" id="email" placeholder="email@example.com">
+            <input type="text" name="Email" id="email" placeholder="email@example.com">
             <small class="error"></small>
 
             <label for="message">Message</label>
-            <textarea id="message" placeholder="Enter a message for us!" rows="6" id="m-box"></textarea>
+            <textarea id="message" name="Message" placeholder="Enter a message for us!" rows="6" id="m-box"></textarea>
             <small class="error"></small>
 
             <div class="center">
               <input type="submit" value="Send Message">
-              <p id="success!"></p>
+              <p id="Success"></p>
             </div>
           </form>
           <img src="images/black-white.png" alt="">
@@ -125,5 +125,17 @@
     </section>
   </main>
   <script src="script.js"></script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwsNc_YaDpiMKQWZ5Ld9b6Y6LlCm8sfu7l5SWGrvm6S2CE7zbdobbpNBRsrPWkDoYA/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
