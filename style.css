@@ -306,7 +306,6 @@ nav ul li a:hover::after{
     display: block;
 }
 
-
 .card:hover {
     background-color: rgb(41, 35, 50);
     cursor: pointer;
@@ -462,6 +461,8 @@ input[type="submit"] {
     font-weight: lighter;
 }
 
+
+
 @media only screen and (max-width: 600px) {
     .header-text {
         margin-top: 100%;
@@ -470,8 +471,16 @@ input[type="submit"] {
     .header-text h1 {
         font-size: 30px;
     }
+    .contact-me-button {
+        top: 350px;
+    }
+    .view-resume-btn {
+        top: 410px;
+        left: 68px;
+    }
+
     form {
-        flex-basis: 100%;
+        
     }
 }
 
